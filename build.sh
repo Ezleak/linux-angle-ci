@@ -5,8 +5,8 @@ pushd angle
 python scripts/bootstrap.py
 gclient sync
 ./build/install-build-deps.sh
-gn gen out/Android-${{matrix.arch}} --args='target_cpu="arm64" is_debug=false angle_enable_swiftshader=true angle_enable_vulkan=true'
-autoninja -C out/Android-${{matrix.arch}}
+gn gen out/Android-arm64 --args='target_cpu="arm64" is_debug=false angle_enable_swiftshader=true angle_enable_vulkan=true'
+autoninja -C out/Android-arm64
 popd
 mkdir ./artifacts
-cp angle/out/Android-${{matrix.arch}}/*.so ./artifacts/ > /dev/null || :
+cp angle/out/Android-arm64/*.so ./artifacts/ > /dev/null || :
