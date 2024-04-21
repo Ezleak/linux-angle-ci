@@ -5,7 +5,7 @@ pushd angle
 python scripts/bootstrap.py
 gclient sync
 ./build/install-build-deps.sh
-gn gen out/Android-arm64 --args='target_cpu="arm64" is_debug=false angle_enable_swiftshader=true angle_enable_vulkan=true'
+gn gen out/Android-arm64 --args='target_os="android" target_cpu="arm64" is_debug=false angle_enable_glsl=true angle_enable_essl=true angle_enable_swiftshader=true angle_enable_vulkan=true'
 autoninja -C out/Android-arm64
 popd
 mkdir ./artifacts
