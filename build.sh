@@ -8,5 +8,3 @@ gclient sync
 gn gen out/Android-arm64 --args='target_os="android" angle_enable_hlsl=true angle_enable_gl=true target_cpu="arm64" is_debug=false angle_enable_glsl=true angle_enable_swiftshader=false angle_enable_gl_desktop_frontend=true angle_enable_vulkan=true'
 autoninja -C out/Android-arm64
 popd
-mkdir ./artifacts
-cp angle/out/Android-arm64/*.so ./artifacts/ > /dev/null || :
