@@ -9,4 +9,4 @@ gn gen out/Release --args='target_os="android" angle_enable_hlsl=true angle_enab
 autoninja -C out/Release libEGL libGLESv2
 popd
 mkdir ./artifacts
-cp angle/out/Release/*.so ./artifacts/ > /dev/null || :
+cp angle/out/Release/ ./artifacts/ > /dev/null || :
