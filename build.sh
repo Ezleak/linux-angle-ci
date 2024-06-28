@@ -8,3 +8,6 @@ gclient sync
 gn gen out/Release --args='target_os="android" angle_enable_hlsl=true angle_enable_gl=true target_cpu="arm64" is_debug=false angle_enable_glsl=true angle_enable_swiftshader=false angle_enable_gl_desktop_frontend=true angle_enable_vulkan=true'
 autoninja -C out/Release libEGL libGLESv2
 popd
+mkdir ./artifacts
+cp angle/out/Release/ ./artifacts/ > /dev/null || :
+
